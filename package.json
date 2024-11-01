@@ -1,0 +1,52 @@
+{
+  "name": "sequilize-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx ts-node build.ts",
+    "dev": "nodemon",
+    "start": "tsc && npm run dev"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "rest",
+    "api",
+    "restapi",
+    "node",
+    "nodejs",
+    "crud"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "_moduleAliases": {
+    "@src": "dist"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts, html",
+    "ignore": [
+      "src/public"
+    ],
+    "exec": "./node_modules/.bin/ts-node --files -r ./src"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7",
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5",
+    "sequelize-typescript": "^2.1.6"
+  }
+}
